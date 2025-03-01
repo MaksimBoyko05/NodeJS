@@ -20,7 +20,7 @@ readFile ('./content/first.txt', 'utf8', (err, result) => {
                 console.log(err);
                 return;
             }
-            console.log(result);
+            console.log("Text has merged into one"); //change
         })
     })
 })
