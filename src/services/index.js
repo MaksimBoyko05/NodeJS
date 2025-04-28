@@ -1,6 +1,5 @@
-import {TodoLocalStorageRepository} from "../repositories/todo";
+import { LocalStorageTodoRepository } from "../repositories/LocalStorageTodoRepository";
 
-export  default {
-  todo:  new TodoLocalStorageRepository()
-
-}
+export const services = {
+  todo: new LocalStorageTodoRepository()
+};

@@ -1,10 +1,11 @@
-import Vue from 'vue'
-import App from './App.vue'
-import services from './services';
-Vue.prototype.$services = services;
+import Vue from 'vue';
+import App from './App.vue';
+import ServicesPlugin from './plugins/services'; 
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+Vue.use(ServicesPlugin);
 
 new Vue({
   render: h => h(App),
-}).$mount('#app')
+}).$mount('#app');

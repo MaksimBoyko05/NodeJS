@@ -110,9 +110,9 @@ export default defineComponent({
   async mounted() {
     this.loading = true;
     try {
-      this.taskList = await repo.getAll();
+      this.taskList = await repo.getAll(); 
     } catch (error) {
-      console.error('Error loading tasks:', error);
+      console.error('Error fetching tasks:', error);
     } finally {
       this.loading = false;
     }
@@ -122,7 +122,7 @@ export default defineComponent({
       try {
         await repo.create(this.model);
         this.taskList = await repo.getAll();
-        this.model = new Task();
+        this.model = new Task(); 
       } catch (error) {
         console.error('Error creating task:', error);
       }
@@ -130,7 +130,7 @@ export default defineComponent({
     async markAsCompleted(task: Task) {
       try {
         task.status = 'completed';
-        await repo.update(task);
+        await repo.update(task); 
         this.taskList = await repo.getAll();
       } catch (error) {
         console.error('Error updating task:', error);
