@@ -18,6 +18,7 @@
   "homepage": "https://github.com/MaksimBoyko05/NodeJS#readme",
   "description": "",
   "dependencies": {
+    "all": "^0.0.0",
     "express": "^5.1.0",
     "lodash": "^4.17.21"
   },
